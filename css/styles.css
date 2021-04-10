@@ -1,3 +1,6 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
 #self_portrait {
     width: 100px;
     height: 100px;
@@ -11,15 +14,76 @@ header h1 {
     color: #AAAAAA;
     font-size: 36pt;
     text-shadow: 2px 2px black;
-    font-family: Arial, Helvetica, sans-serif;
     padding-left: 1rem;
 }
-table {
-    border: 1px solid black;
+
+#wrapper {
+    margin: 0 auto;
+    max-width: 960px;
+    background-color: #DDD;
+    padding: 10px;
+}
+
+#navbar a:hover {
+    background-color: #AAAAAA;
+    color: #333;
+}
+/*  The following navbar code and styling was taken from
+    https://www.w3schools.com/howto/howto_js_navbar_sticky.asp
+    Also used was the javascript to add the class while scrolling */
+
+/* Style the navbar */
+#navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+
+/* Navbar links */
+#navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+  
+/* Page content */
+.content {
+    padding: 16px;
+}
+  
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+/* This selctor was modified from the original to set position from fixed to sticky
+    It fixes an issue of when scrolling, the nav bar becomes longer than it should.*/
+.sticky {
+    position: sticky;
+    top: 0;
+}
+  
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+    padding-top: 60px;
+}
+
+/* Style table */
+#schedule {
+    background-color: #333;
+    color: white;
+    border: 1px solid white;
     border-spacing: 3px;
 }
 
 td {
     padding: 3px;
-    border: 1px solid black;
+    border: 1px solid white;
+}
+
+#schedule tr td:nth-child(even) {
+    background-color: #999 ;
+    color: black;
+}
+
+.hidden {
+    display: none;
 }
