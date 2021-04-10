@@ -1,8 +1,19 @@
 #self_portrait {
     width: 100px;
     height: 100px;
+    float: left;
 }
-
+header {
+    display: flex;
+    vertical-align: center;
+}
+header h1 {
+    color: #AAAAAA;
+    font-size: 36pt;
+    text-shadow: 2px 2px black;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 1rem;
+}
 table {
     border: 1px solid black;
     border-spacing: 3px;
